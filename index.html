@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<body>
+  <h1>
+    hello
+  </h1>
+  <video
+    id="myVideo"
+    width="200"
+    controls
+    src="https://scontent-vie1-1.cdninstagram.com/v/t50.12441-16/92796988_673198943469046_5424070949400624019_n.mp4?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=tiM9IezpTKcAX_z9GSg&oe=5E8F1DD8&oh=7eeee533c00336ce1803390d01f0a144"
+  ></video>
+
+  <!-- <a
+    id="cool"
+    href=
+    target="_blank"
+    rel="nofollow"
+    data-quality="SD"
+    data-type="MP4"
+  >
+    downloan
+  </a> -->
+
+  <button id="facebook">
+    video facebook
+  </button>
+
+  <button id="insta">
+    insta
+  </button>
+  <button id="photoInsta">
+    photoInsta
+  </button>
+</body>
+<script>
+  const phtoInasta =
+    "https://scontent-vie1-1.cdninstagram.com/v/t51.2885-19/18645376_238828349933616_4925847981183205376_a.jpg?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_ohc=mxAbsoGSjA0AX---KKD&oh=6191dcf8fe5b59a4c5f76375bde08ba5&oe=5EB6EE7C";
+  const instaUrl =
+    "https://scontent-vie1-1.cdninstagram.com/v/t50.12441-16/92796988_673198943469046_5424070949400624019_n.mp4?_nc_ht=scontent-vie1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=tiM9IezpTKcAX_z9GSg&oe=5E8F1DD8&oh=7eeee533c00336ce1803390d01f0a144";
+  const facebookVideo =
+    "https://video.xx.fbcdn.net/v/t42.9040-2/52811005_1658974407735162_2534901797022072832_n.mp4?_nc_cat=110&_nc_sid=985c63&efg=eyJybHIiOjMyNCwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=Qa91Mt3UuUoAX-_UU8P&rl=324&vabr=180&_nc_ht=video-ort2-2.xx&oh=180c22fd1033d1603f27f2c700e6321e&oe=5E8CE776";
+
+  document.getElementById("facebook").onclick = () => {
+    downloanUrl(facebookVideo);
+  };
+  document.getElementById("insta").onclick = () => {
+    downloanUrl(instaUrl);
+  };
+  document.getElementById("photoInsta").onclick = () => {
+    downloanUrl(phtoInasta);
+  };
+  function downloanUrl(url) {
+    let a = document.createElement("a");
+    a.style.visibility = "hidden";
+    a.href = `${url}&dl=1`;
+    document.body.appendChild(a);
+    a.click();
+    return false;
+  }
+</script>
